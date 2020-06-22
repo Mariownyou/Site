@@ -26,6 +26,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/view')
+def view():
+    return render_template('view.html', values=User.query.all())
+
+
 @app.route('/game')
 def game():
     return render_template('game.html', content=field)
@@ -84,5 +89,5 @@ def user():
         return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
     db.create_all()
+    app.run(debug=True)
