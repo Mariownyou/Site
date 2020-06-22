@@ -26,6 +26,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/lb')
+def leaders():
+    return render_template('leaders.html', values=User.query.all())
+
+
 @app.route('/view')
 def view():
     return render_template('view.html', values=User.query.all())
