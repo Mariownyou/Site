@@ -1,0 +1,10 @@
+{%extends 'main.html'%}
+{% block link %}
+<link href="style.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block title %}Game{% endblock %}
+{% block content %}
+{%for i in content%}
+    <p>{{''.join(i)}}</p>
+{%endfor%}
+{% endblock %}
