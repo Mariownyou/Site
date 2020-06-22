@@ -84,5 +84,6 @@ def user():
         return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    db.create_all()
+    
     app.run(debug=True)
+    db.create_all()
