@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = 'Dina'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////User.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=1)
 db = SQLAlchemy(app)
@@ -84,6 +84,5 @@ def user():
         return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    
     app.run(debug=True)
     db.create_all()
