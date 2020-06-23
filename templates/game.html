@@ -1,12 +1,19 @@
 {%extends 'main.html'%}
 {% block link %}
 <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" type="text/css">
-<script type="text/javascript" scr="{{url_for('static', filename='jquery-3.5.1.min.js')}}"></script>
-<script type="text/javascript" scr="{{url_for('static', filename='script.js')}}"></script>
+<script type="text/javascript" scr="{{ url_for('static', filename='scripts/script.js')}}"></script>
+<script type="text/javascript" scr="{{ url_for('static', filename='script/check.js')}}"></script>
 {% endblock %}
 {% block title %}Game{% endblock %}
 {% block content %}
 {%for i in content%}
     <p>{{''.join(i)}}</p>
 {%endfor%}
+<button type="button" class="btn btn-primary btn-lg">⬅️</button>
+<button type="button" class="btn btn-primary btn-lg">⬆️</button>
+<button type="button" class="btn btn-primary btn-lg">⬇️</button>
+<button type="button" class="btn btn-primary btn-lg">➡️</button>
 {% endblock %}
+
+
+

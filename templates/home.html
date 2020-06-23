@@ -1,5 +1,9 @@
 {% extends "main.html" %}
 {% block title %}Home page{% endblock %}
+{% block link %}
+<link href="{{ url_for('static', filename='styles/home.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
 {% block content %}
-<h2>Leva</h2>
+<h2>Мой сайтик</h2>
+
 {% endblock %}
